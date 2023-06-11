@@ -4,6 +4,7 @@ INSTALL_FILES = \
 	/var/lib/sockactex/bin/sockactex
 
 install: $(INSTALL_FILES)
+	sudo systemctl restart sockactex
 
 /etc/systemd/system/sockactex.socket: sockactex.socket
 	sudo install sockactex.socket /etc/systemd/system/sockactex.socket
