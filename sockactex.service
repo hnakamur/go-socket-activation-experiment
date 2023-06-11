@@ -4,6 +4,7 @@ Requires    = sockactex.socket
 After       = multi-user.target
 
 [Service]
+Type             = notify
 User             = root
 Group            = root
 WorkingDirectory = /var/lib/sockactex
