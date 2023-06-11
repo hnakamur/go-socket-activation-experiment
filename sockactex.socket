@@ -1,0 +1,6 @@
+[Unit]
+Description=sockactex HTTP server socket
+
+[Socket]
+ListenStream = 8080
+BindIPv6Only = both

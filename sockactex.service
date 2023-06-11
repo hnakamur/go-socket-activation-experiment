@@ -1,0 +1,15 @@
+[Unit]
+Description = sockactex HTTP server
+Requires    = sockactex.socket
+After       = multi-user.target
+
+[Service]
+User             = root
+Group            = root
+WorkingDirectory = /var/lib/sockactex
+ExecStart        = /var/lib/sockactex/bin/sockactex
+ExecReload       = /bin/kill -HUP $MAINPID
+Restart          = always
+NotifyAccess     = main
+KillMode         = process
+NonBlocking      = true
